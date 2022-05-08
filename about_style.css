@@ -1,0 +1,113 @@
+html{
+    height: 100%;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content {
+    flex: 1;
+}
+
+nav {
+    color: rgb(243, 244, 248);
+    display: block;
+    background-color: rgb(35, 39, 49);
+    padding: 1.5vh 0px 3vh 0px;
+    text-decoration: none;
+}
+.top {
+    display: flex;
+}
+.menu {
+    flex: 80%;
+}
+.menu > li > a {
+    text-decoration: none;
+    color: rgb(243, 244, 248);
+}
+.menu > li > a:hover {
+    text-decoration: none;
+    color: rgb(255, 82, 116);
+}
+.menu > li {
+    display: inline-block;
+    vertical-align: text-top;
+    padding-right: 50px;
+    font-size: 18px;
+}
+.menu >li:hover {
+    color: rgb(255, 82, 116);
+}
+
+.login {
+    flex: 20%;
+}
+.login > li > a {
+    text-decoration: none;
+    color: rgb(243, 244, 248);
+}
+.login > li > a:hover {
+    text-decoration: none;
+    color: rgb(255, 82, 116);
+}
+.login > li {
+    display: inline-block;
+    vertical-align: text-top;
+    padding-left: 50px;
+    font-size: 18px;
+}
+.login >li:hover {
+    color: rgb(255, 82, 116);
+}
+
+main {
+    font-size: 20px;
+}
+
+.showcase {
+    display: flex;
+    position: relative;
+    width: 40vw;
+    height: 40vw;
+    overflow: hidden;
+
+}
+.slides {
+    display: none;
+}
+.slides > img {
+    width: 100%;
+    max-height: min-content;
+}
+.right-left {
+    /*animation: 15s slide infinite ease-in-out;*/
+    animation-name: slide;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes slide{
+    from{margin-left: 100%} to{margin-left: 0%}
+    
+    /*
+    0% {left: 100%}
+    5% {left: 0%}
+    20% {left: 0%}
+    25% {left: -100%}
+    100% {left: -100%}*/
+}
+
+footer {
+    margin-bottom: 0;
+    width: 100%;
+    display: flex;
+    padding: 2vw;
+    color: rgb(243, 244, 248);
+    background-color: rgb(35, 39, 49);
+}
