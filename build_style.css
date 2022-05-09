@@ -70,9 +70,40 @@ main {
     font-size: 20px;
 }
 
+.form_container{
+    margin: 10vh 0vw 10vh 25vw;
+    width: 50vw;
+    align-self: center;
+    background-color: rgb(73, 80, 97);
+    color :rgb(243, 244, 248);
+    height: 60vw;
+}
+.intel {
+    display: none;
+}
+.amd {
+    display: none;
+}
+.radio_intel:checked ~ .intel {
+    display: block;
+}
+.radio_amd:checked ~ .amd {
+    display: block;
+}
+.img_radio {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.img_radio + img {
+    max-height: 150px;
+    
+    cursor: pointer;
+}
 
-
-
+.img_radio:checked + img {
+    outline: 2px solid rgb(255, 82, 116);
+}
 
 
 footer {
