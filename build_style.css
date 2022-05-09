@@ -78,17 +78,12 @@ main {
     color :rgb(243, 244, 248);
     height: 60vw;
 }
-.intel {
+
+.radio_intel:checked .amd {
     display: none;
 }
-.amd {
+.radio_amd:checked .intel{
     display: none;
-}
-.radio_intel:checked ~ .intel {
-    display: block;
-}
-.radio_amd:checked ~ .amd {
-    display: block;
 }
 .img_radio {
     opacity: 0;

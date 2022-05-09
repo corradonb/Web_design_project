@@ -69,6 +69,25 @@ nav {
 main {
     font-size: 20px;
 }
+.main_content {
+    margin: 10vh 0vw 10vh 4vw;
+    padding: 0vh 8vw 0vh 8vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width:75vw;
+    align-items: center;
+}
+.main_content > img {
+    max-width: 37.5vw;
+}
+.text {
+    text-align: center;
+    text-align: top;
+}
+.text > div{
+    text-align: left;
+}
+
 
 .showcase {
     display: flex;
