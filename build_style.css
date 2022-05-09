@@ -79,10 +79,11 @@ main {
     height: 60vw;
 }
 
-.radio_intel:checked ~ .amd {
+
+.chipset.radio_intel:checked ~ .cpu.amd {
     display: none;
 }
-.radio_amd:checked ~ .intel{
+.chipset.radio_amd:checked ~ .cpu.intel{
     display: none;
 }
 
