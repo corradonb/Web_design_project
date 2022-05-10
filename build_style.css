@@ -74,7 +74,7 @@ main {
     margin: 10vh 0vw 10vh 25vw;
     width: 50vw;
     align-self: center;
-    background-color: rgb(73, 80, 97);
+    background-color: rgb(61, 67, 81);
     color :rgb(243, 244, 248);
     height: 60vw;
 }
@@ -94,7 +94,6 @@ main {
 }
 .img_radio + img {
     max-height: 150px;
-    
     cursor: pointer;
 }
 
