@@ -96,11 +96,9 @@ main {
     max-height: 150px;
     cursor: pointer;
 }
-
 .img_radio:checked + img {
     outline: 2px solid rgb(255, 82, 116);
 }
-
 
 footer {
     margin-bottom: 0;
