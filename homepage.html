@@ -8,6 +8,32 @@
     <title></title>
 </head>
 <body>
+    <div class="login_container" id="login_container">
+        <form class="login_form">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" value=""><br>
+            <label for="passowrd">Password:</label><br>
+            <input type="text" id="password" name="password" value=""><br><br>
+            <br>
+            <input type="submit" class="confirm" value="Log In">
+            <button type="button" class="cancel">Cancel</button>
+
+        </form> 
+
+    </div>
+    <div class="signup_container" id="signup_container">
+        <form class="login_form">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" value=""><br>
+            <label for="passowrd">Password:</label><br>
+            <input type="text" id="password" name="password" value=""><br><br>
+            <br>
+            <input type="submit" class="confirm" value="Sign Up">
+            <button type="button" class="cancel">Cancel</button>
+
+        </form> 
+
+    </div>
     <div class="content">
         <nav>
             <div class="top">
@@ -18,12 +44,14 @@
                     <li><a href="order_history.html">My orders</a></li>
                 </ul>
                 <ul class="login">
-                    <li><a href="login.html">Log in</a></li>
-                    <li><a href="signup.html">Sign up</a></li>
+                    <button type="button">Log in</button>
+                    <button type="button">Sign up</button>
                 </ul>
             </div>
         </nav>
+
         <main>
+            
             <div class="main_content">
                 <div class="text">
                     <h2> insert text header </h2>
