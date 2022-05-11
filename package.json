@@ -2,7 +2,7 @@
   "name": "proiect",
   "version": "1.0.0",
   "description": "proiect_final",
-  "main": "about_scripts.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

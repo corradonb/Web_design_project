@@ -26,29 +26,28 @@
         <div>
             text goes here
         </div>
-        <div class="form_container">
+        <div class="form_and_button">
             <div class="chipset">
                 <label>
-                    chipset:
+                    Chipset:
                 </label>
-                <input type="radio" class="radio_intel btn" name="chipset" value="intel" checked> Intel
-                <input type="radio" class="radio_amd btn" name="chipset" value="amd"> AMD
+                <button type="button" onclick="onClickIntel()">Intel</button>
+                <button type="button" onclick="onClickAmd()">AMD</button>
             </div>
             <form>
-               
-                <br>
+            <div class="form_container">       
                 <div class="cpu">
                     <label>
                         CPU: 
                     </label>
-                    <select class="intel">
+                    <select class="intel" id="intel">
                         <option name="cpu" value="i7 4790k">i7 4790k</option>
                         <option name="cpu" value="i7 10900k">i7 10900k</option>
                         <option name="cpu" value="i7 12700k">i7 12700k</option>
                         <option name="cpu" value="i9 10900kf">i9 10900kf</option>
                         <option name="cpu" value="i9 12900k">i9 12900k</option>
                     </select>
-                    <select class="amd">
+                    <select class="amd" id="amd">
                         <option name="cpu" value="ryzen 5 3600x">ryzen 5 3600</option>
                         <option name="cpu" value="ryzen 7 3800x">ryzen 7 3800x</option>
                         <option name="cpu" value="ryzen 7 5800x">ryzen 7 5800x</option>

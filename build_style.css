@@ -70,7 +70,7 @@ main {
     font-size: 20px;
 }
 
-.form_container{
+.form_and_button{
     margin: 10vh 0vw 10vh 25vw;
     width: 50vw;
     align-self: center;
@@ -78,13 +78,14 @@ main {
     color :rgb(243, 244, 248);
     height: 60vw;
 }
-
-
-.chipset.radio_intel:checked ~ .cpu.amd {
+.intel{
+    display: block;
+}
+.amd{
     display: none;
 }
-.chipset.radio_amd:checked ~ .cpu.intel{
-    display: none;
+.cpu {
+    display: flex;
 }
 
 .img_radio {

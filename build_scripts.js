@@ -1,3 +1,15 @@
+function onClickIntel() {
+    var x = document.getElementById("intel");
+    var y = document.getElementById("amd");
+    x.style.display = "block";
+    y.style.display = "none";
+}
+function onClickAmd() {
+    var x = document.getElementById("intel");
+    var y = document.getElementById("amd");
+    x.style.display = "none";
+    y.style.display = "block";
+}
 function handleSubmit(event) {
     const cpu = document.querySelector('[name="cpu"]:checked').value;
     const motherboard = document.querySelector('[name="motherboard"]:checked').value
@@ -11,6 +23,7 @@ function handleSubmit(event) {
 function init() {
     const form = document.querySelector('form');
     form.addEventListener('submit', handleSubmit);
+    
 }
 
 window.onload=init;
