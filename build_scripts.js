@@ -1,10 +1,18 @@
 function onClickIntel() {
+    var a = document.getElementById("intel_button");
+    var b = document.getElementById("amd_button");
+    a.style.backgroundColor = 'rgba(255, 82, 116, 0.8)';
+    b.style.backgroundColor = 'rgb(61, 67, 81)';
     var x = document.getElementById("intel");
     var y = document.getElementById("amd");
     x.style.display = "block";
     y.style.display = "none";
 }
 function onClickAmd() {
+    var a = document.getElementById("intel_button");
+    var b = document.getElementById("amd_button");
+    b.style.backgroundColor = 'rgba(255, 82, 116, 0.8)';
+    a.style.backgroundColor = 'rgb(61, 67, 81)';
     var x = document.getElementById("intel");
     var y = document.getElementById("amd");
     x.style.display = "none";
