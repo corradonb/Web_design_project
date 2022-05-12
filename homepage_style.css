@@ -47,6 +47,7 @@ nav {
 
 .login {
     flex: 20%;
+
 }
 .login > button {
     background-color: transparent;
@@ -64,13 +65,17 @@ nav {
 .login >li:hover {
     color: rgb(255, 82, 116);
 }
+
+
+
+
 .login_container {
-   
+    display: none;
     width: 25vw;
     height: 40vh;
     position: absolute;
     background-color: rgb(243, 244, 248);
-    margin-left: 27.5vw;
+    margin-left: 37.5vw;
     margin-top: 30vh;
     z-index: 5;
     border-radius: 20px;
@@ -82,7 +87,7 @@ nav {
     height: 40vh;
     position: absolute;
     background-color: rgb(243, 244, 248);
-    margin-left: 47.5vw;
+    margin-left: 37.5vw;
     margin-top: 30vh;
     z-index: 5;
     border-radius: 20px;
@@ -189,6 +194,30 @@ main {
     background-color: rgb(255, 82, 116);
     color:rgb(243, 244, 248);
     transition: 0.3s;
+}
+
+@media only screen and (max-width: 800px) {
+    .menu{
+        flex: 70%;
+    }
+    .menu > li {
+        padding-right: 20px;
+    }
+    .login{
+        flex: 30%;
+    }
+    .login > button {
+        padding-left: 0px;
+    }
+    .login > ul {
+        padding-inline-start: 0px;
+    }
+    .login_container, .signup_container {
+        width: 50vw;
+        height: 60vh;
+        margin-left: 25vw;
+        margin-top: 20vh;
+    }   
 }
 
 footer {

@@ -13,10 +13,10 @@
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name" value=""><br>
             <label for="passowrd">Password:</label><br>
-            <input type="text" id="password" name="password" value=""><br><br>
+            <input type="password" id="password" name="password" value=""><br><br>
             <br>
             <input type="submit" class="confirm" value="Log In">
-            <button type="button" class="cancel">Cancel</button>
+            <button type="button" class="cancel" onclick="onClickCancel()">Cancel</button>
 
         </form> 
 
@@ -26,10 +26,10 @@
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name" value=""><br>
             <label for="passowrd">Password:</label><br>
-            <input type="text" id="password" name="password" value=""><br><br>
+            <input type="password" id="password" name="password" value=""><br><br>
             <br>
             <input type="submit" class="confirm" value="Sign Up">
-            <button type="button" class="cancel">Cancel</button>
+            <button type="button" class="cancel" onclick="onClickCancel()">Cancel</button>
 
         </form> 
 
@@ -44,8 +44,8 @@
                     <li><a href="order_history.html">My orders</a></li>
                 </ul>
                 <ul class="login">
-                    <button type="button">Log in</button>
-                    <button type="button">Sign up</button>
+                    <button type="button" onclick="onClickLogin()">Log in</button>
+                    <button type="button" onclick="onClickSignup()">Sign up</button>
                 </ul>
             </div>
         </nav>
