@@ -71,6 +71,7 @@ main {
 }
 
 .form_and_button{
+    font-family: "Times New Roman", Times, serif;
     margin: 10vh 0vw 10vh 25vw;
     width: 50vw;
     align-self: center;
