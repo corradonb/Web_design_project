@@ -10,7 +10,7 @@
 <body>
     <div class="login_container" id="login_container">
         <form class="login_form">
-            <label for="name">Name:</label><br>
+            <label for="name">Username:</label><br>
             <input type="text" id="name" name="name" value=""><br>
             <label for="passowrd">Password:</label><br>
             <input type="password" id="password" name="password" value=""><br><br>
@@ -23,9 +23,13 @@
     </div>
     <div class="signup_container" id="signup_container">
         <form class="login_form">
-            <label for="name">Name:</label><br>
+            <label for="email">E-mail:</label><br>
+            <input type="text" id="email" name="email" value=""><br>
+            <label for="name">Username:</label><br>
             <input type="text" id="name" name="name" value=""><br>
             <label for="passowrd">Password:</label><br>
+            <input type="password" id="password" name="password" value=""><br>
+            <label for="passowrd">Confirm password:</label><br>
             <input type="password" id="password" name="password" value=""><br><br>
             <br>
             <input type="submit" class="confirm" value="Sign Up">
@@ -43,6 +47,7 @@
                     <li><a href="build.html">Build your PC</a></li>
                     <li><a href="Public\html\order_history.html">My orders</a></li>
                 </ul>
+                
                 <ul class="login">
                     <button type="button" onclick="onClickLogin()">Log in</button>
                     <button type="button" onclick="onClickSignup()">Sign up</button>
