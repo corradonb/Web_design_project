@@ -47,16 +47,17 @@ nav {
 
 .login {
     flex: 20%;
-
+    margin-top: 0px;
 }
 .login > button {
     background-color: transparent;
     border: none;
     border-width: 0;
     margin: 0;
-    padding-left: 50px;
+    padding-left: 0px;
     color:rgb(243, 244, 248);
     font-size: 18px;
+    margin-bottom: 10px;
 }
 .login > button:hover {
     color: rgb(255, 82, 116);
@@ -66,7 +67,32 @@ nav {
     color: rgb(255, 82, 116);
 }
 
+/* Dropdown Button */
+.dropbtn {
+    margin-right: 50px;
+    font-size: 18px;
+    background-color: rgb(35, 39, 49);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
 
+  .dropdown {
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(35, 39, 49);
+    z-index: 1;
+  }
+  .dropdown:hover .dropdown-content {display: block;}
+
+  .dropdown:hover .dropbtn {color: rgb(255, 82, 116);}
 
 
 .login_container {

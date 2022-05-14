@@ -71,13 +71,23 @@ main {
 }
 
 .form_and_button{
+    padding: 5px 0px 0px 5px;
     font-family: "Times New Roman", Times, serif;
     margin: 10vh 0vw 10vh 25vw;
     width: 50vw;
     align-self: center;
     background-color: rgb(61, 67, 81);
     color :rgb(243, 244, 248);
-    height: 60vw;
+    height: 60vh;
+}
+.select {
+    margin-left: 10px;
+    background-color: rgba(61, 67, 81, 0.8);
+    color:rgb(243, 244, 248);
+    border-color: rgba(255, 82, 116, 0.6);
+}
+.select > option:hover {
+    background-color: rgba(255, 82, 116, 0.8);
 }
 .chipset {
     display: flex;
@@ -120,6 +130,28 @@ main {
 }
 .img_radio:checked + img {
     outline: 2px solid rgb(255, 82, 116);
+}
+.confirm{
+    padding: 5px 15px;
+    font-size: 16px;
+    border: solid 2px;
+    border-radius: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 1.4;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-left: 15px;
+    color:rgb(255, 82, 116);
+    background-color: rgb(35, 39, 49);
+}
+.confirm:hover{
+    background-color: rgba(255, 82, 116, 0.8);
+    color:rgb(243, 244, 248);
+    transition: 0.3s;
 }
 
 footer {

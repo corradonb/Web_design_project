@@ -2,11 +2,8 @@
  proiect_final
 
  TO_DO_LIST:
- html+css:      dropdown menu
-
  javascript:    create/delete elements in page
                 setTimeout()
-                localstorage
                 math/array/string/date library use
                 random property change
                 target, currentTarget, stopPropagation()

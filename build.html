@@ -39,14 +39,14 @@
                     <label>
                         CPU: 
                     </label>
-                    <select class="intel" id="intel">
+                    <select class="intel select" id="intel">
                         <option name="cpu" value="i7 4790k">i7 4790k</option>
                         <option name="cpu" value="i7 10900k">i7 10900k</option>
                         <option name="cpu" value="i7 12700k">i7 12700k</option>
                         <option name="cpu" value="i9 10900kf">i9 10900kf</option>
                         <option name="cpu" value="i9 12900k">i9 12900k</option>
                     </select>
-                    <select class="amd" id="amd">
+                    <select class="amd select" id="amd">
                         <option name="cpu" value="ryzen 5 3600x">ryzen 5 3600</option>
                         <option name="cpu" value="ryzen 7 3800x">ryzen 7 3800x</option>
                         <option name="cpu" value="ryzen 7 5800x">ryzen 7 5800x</option>
@@ -58,7 +58,7 @@
                     <label>
                         Motherboard: 
                     </label>
-                    <select>
+                    <select class="select">
                         <option name="motherboard" value="MSI z590 pro">MSI z590 pro (1200)</option>
                         <option name="motherboard" value="MSI b550-a pro">MSI b550-a pro (AM4)</option>
                         <option name="motherboard" value="MSI meg x570s ace max">MSI meg x570s ace max (AM4)</option>
@@ -71,7 +71,7 @@
                     <label>     
                         GPU:    
                     </label>     
-                    <select>    
+                    <select class="select">    
                         <option name="gpu" value="1050">1050</option>    
                         <option name="gpu" value="1070ti">1070ti</option>    
                         <option name="gpu" value="2080">2080</option>    
@@ -85,12 +85,21 @@
                     <label>
                         PSU: 
                     </label>
+                    <select class="select">    
+                        <option name="psu" value="EVGA GD 600w">EVGA GD 600w</option>    
+                        <option name="psu" value="EVGA GQ 750w">EVGA GQ 750w</option>    
+                        <option name="psu" value="EVGA SuperNova 850w">EVGA SuperNova 850w</option>    
+                    </select>  
                 </div>
                 <br>
                 <div class="cooler">
                     <label>
                         Cooler: 
                     </label>
+                    <select class="select">
+                        <option name="cooler" value="no cooler">No cooler(not recommended)</option>
+                        <option name="cooler" value="NZXT kraken x53">NZXT kraken x53</option>
+                    </select>
                 </div>
                 <br>
                 <div class="case">
@@ -106,7 +115,7 @@
                         <img src="Images\Build\lancool_II_mesh_c_rgb_snow.jpg">
                     </label>
                 </div>
-                <input type="submit">
+                <input type="submit" class="confirm">
             </form>
         </div>
     </div>
