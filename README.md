@@ -2,9 +2,7 @@
  proiect_final
 
  TO_DO_LIST:
- javascript:    create/delete elements in page
-                array/string/date library use
-                target, currentTarget, stopPropagation()
+ javascript:    target, currentTarget
                 getComputedStyle(), getBoundingClientRect()
 
  node:          post requests
@@ -13,4 +11,5 @@
                 templates
                 404 error page
 
-optional:       email regex;
+optional:       email regex
+                date library maybe

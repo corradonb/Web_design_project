@@ -27,6 +27,7 @@ function createPopup() {
     const div = document.createElement('div');
     document.body.appendChild(div);
     div.classList.add("popup")
+    div.setAttribute("id", "popup");
     
     const text = document.createElement('div');
     div.appendChild(text);
@@ -34,19 +35,28 @@ function createPopup() {
     text.style.textAlign="center";
     text.style.marginTop="5vh";
     text.style.fontSize="18px";
-    
-    const button=document.createElement('a');
+
+    const link=document.createElement('a');
+    div.appendChild(link);
+    link.href="order_history";
+    link.style.width="100%";
+    link.style.height="100%";
+    link.style.position= "absolute";
+    link.style.top="0";
+    link.style.left="0";
+        
+    const button=document.createElement('button');
     button.classList.add("btn");
     div.appendChild(button);
-    button.innerHTML="Check order";
-    button.href="order_history";
+    button.style.position="absolute"
+    button.innerHTML="Close"; 
 
-    /*
-    const close=document.createElement('button');
-    button.classList.add("btn");
-    div.appendChild(button);
-    button.innerHTML="Close"; */
-
+    button.addEventListener("click", onClickDelete);
+}
+function onClickDelete(event){
+    var a = document.getElementById("popup");
+    a.remove();
+    event.stopPropagation();
 }
 
 function handleSubmit(event) {
