@@ -70,15 +70,12 @@ main {
     font-size: 20px;
 }
 
-
-
-
-
 footer {
     margin-bottom: 0;
     width: 100%;
+    box-sizing: border-box;
     display: flex;
-    padding: 2vw;
+    padding: 2vw 0 2vw 2vw;
     color: rgb(243, 244, 248);
     background-color: rgb(35, 39, 49);
 }
