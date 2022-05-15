@@ -38,7 +38,7 @@ function showSlides(n) {
 
 function init() {
     showSlides(slideIndex);
-    setTimeout(stopSlideShow, 600000);
+    setTimeout(stopSlideShow, 60000);
 }
 
 window.onload = init;

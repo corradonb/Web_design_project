@@ -6,10 +6,11 @@
                 array/string/date library use
                 target, currentTarget, stopPropagation()
                 getComputedStyle(), getBoundingClientRect()
-                regex
 
  node:          post requests
                 ajax requests from json
                 login/logout session
                 templates
                 404 error page
+
+optional:       email regex;

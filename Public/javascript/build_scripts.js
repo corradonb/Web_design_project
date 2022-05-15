@@ -23,6 +23,32 @@ function onClickAmd() {
     y.style.display = "block";
     localStorage.setItem("retainChipset", "amd");
 }
+function createPopup() {
+    const div = document.createElement('div');
+    document.body.appendChild(div);
+    div.classList.add("popup")
+    
+    const text = document.createElement('div');
+    div.appendChild(text);
+    text.innerHTML="Congratulations! Your order has been registered";
+    text.style.textAlign="center";
+    text.style.marginTop="5vh";
+    text.style.fontSize="18px";
+    
+    const button=document.createElement('a');
+    button.classList.add("btn");
+    div.appendChild(button);
+    button.innerHTML="Check order";
+    button.href="order_history";
+
+    /*
+    const close=document.createElement('button');
+    button.classList.add("btn");
+    div.appendChild(button);
+    button.innerHTML="Close"; */
+
+}
+
 function handleSubmit(event) {
     const cpu = document.querySelector('[name="cpu"]:checked').value;
     const motherboard = document.querySelector('[name="motherboard"]:checked').value;
@@ -32,7 +58,7 @@ function handleSubmit(event) {
     const case1 = document.querySelector('[name="case"]:checked').value;
 
     const order_string = cpu + ", " + motherboard + ", " + gpu + ", " + psu + ", " + cooler + ", " + case1;
-    window.alert(order_string);
+    createPopup();
     event.preventDefault();
 }
 
