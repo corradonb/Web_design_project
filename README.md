@@ -10,7 +10,7 @@
                 getComputedStyle(), getBoundingClientRect()
                 regex
 
- node:          get/post requests
+ node:          post requests
                 ajax requests from json
                 login/logout session
                 templates
