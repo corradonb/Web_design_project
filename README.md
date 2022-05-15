@@ -3,9 +3,7 @@
 
  TO_DO_LIST:
  javascript:    create/delete elements in page
-                setTimeout()
-                math/array/string/date library use
-                random property change
+                array/string/date library use
                 target, currentTarget, stopPropagation()
                 getComputedStyle(), getBoundingClientRect()
                 regex

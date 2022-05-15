@@ -1,9 +1,12 @@
 let slideIndex=0;
+const myInterval=setInterval(autoSlides, 5000);
 
 function autoSlides () {
-    setInterval(()=>{
-        plusSlides(1);
-    },5000);
+    plusSlides(1);
+}
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
 }
 
 function plusSlides(n) {
@@ -13,7 +16,11 @@ function plusSlides(n) {
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
-
+function stopSlideShow() {
+    clearInterval(myInterval);
+    let slides = document.getElementsByClassName("slides");
+    currentSlide(getRandomInt(4));
+}
 function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("slides");
@@ -30,8 +37,8 @@ function showSlides(n) {
 }
 
 function init() {
-    autoSlides();
     showSlides(slideIndex);
+    setTimeout(stopSlideShow, 600000);
 }
 
 window.onload = init;
