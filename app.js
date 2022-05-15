@@ -21,7 +21,7 @@ app.get('/signup',function(req,res) {
     res.sendFile('signup.html', {root: path.join(__dirname)});
 });
 
-app.use('/public', express.static(path.join(__dirname, 'Public')));
+app.use('/proiect', express.static(path.join(__dirname)));
 
 
 app.listen(3000);
