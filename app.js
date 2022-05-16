@@ -1,6 +1,9 @@
 const express = require('express')
 const app = express();
+const bodyParser = require('body-parser');
 const path = require('path');
+
+app.use(bodyParser.urlencoded({ extended: false }))
 
 app.get('/homepage',function(req,res) {
     res.sendFile('public/html/homepage.html', {root: path.join(__dirname)});
@@ -14,27 +17,20 @@ app.get('/build',function(req,res) {
 app.get('/order_history',function(req,res) {
     res.sendFile('/public/html/order_history.html', {root: path.join(__dirname)});
 });
+app.get('/404',function(req,res) {
+  res.sendFile('/public/html/404.html', {root: path.join(__dirname)});
+});
+
+// app.post('/build', function(req, res) {
+//   const {scpu, sgpu, smotherboard, spsu, scooler, case1} = req.body;
+//   res.send(`Your order string is: ${scpu}, ${smotherboard}, ${sgpu}, ${spsu}, ${scooler}, ${case1}`)
+// })
 
 app.use('/public', express.static(path.join(__dirname)));
-
-
-app.use(function(req, res) {
-  res.status(404);
-
-  // respond with html page
-  if (req.accepts('html')) {
-    res.render('404', { url: req.url });
-    return;
-  }
-
-  // respond with json
-  if (req.accepts('json')) {
-    res.json({ error: 'Not found' });
-    return;
-  }
-
-  // default to plain-text. send()
-  res.type('txt').send('Not found');
+app.use((req, res, next) => {
+  res.status(404).sendFile("/public/html/404.html", {root: path.join(__dirname)});
 });
+
+
 
 app.listen(3000);

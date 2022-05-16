@@ -65,7 +65,7 @@ function handleSubmit(event) {
     const gpu = document.querySelector('[name="gpu"]:checked').value;
     const psu = document.querySelector('[name="psu"]:checked').value;
     const cooler = document.querySelector('[name="cooler"]:checked').value;
-    const case1 = document.querySelector('[name="case"]:checked').value;
+    const case1 = document.querySelector('[name="case1"]:checked').value;
 
     const order_string = cpu + ", " + motherboard + ", " + gpu + ", " + psu + ", " + cooler + ", " + case1;
     createPopup();

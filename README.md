@@ -5,11 +5,11 @@
  javascript:    target, currentTarget
                 getComputedStyle(), getBoundingClientRect()
 
- node:          post requests
+ node:          post requests (uncomment app.js, add method="post" to form in html, remove preventDefault() from js form handler)
                 ajax requests from json
                 login/logout session
                 templates
-                404 error page
 
 optional:       email regex
                 date library maybe
+
