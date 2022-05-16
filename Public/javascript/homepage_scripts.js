@@ -28,17 +28,16 @@ function handleSubmit(event) {
     const email = document.querySelector('[name="email"]').value;
     const username = document.querySelector('[name="name"]').value;
     const password = document.querySelector('[name="password"]').value;
-    const regex1 = /^[0-9A-Za-z-_]+$/;
+    const regex1 = /^[0-9A-Za-z-_ ]+$/;
     const regex2 = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const credentials = username + ", " + password;
     if(regex1.test(username)){
         window.alert(credentials);
-        event.preventDefault();
     }
     else{
         window.alert("Invalid username");
+        event.preventDefault();
     }
-
 }
 
 function init() {

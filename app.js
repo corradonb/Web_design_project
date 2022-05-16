@@ -21,10 +21,12 @@ app.get('/404',function(req,res) {
   res.sendFile('/public/html/404.html', {root: path.join(__dirname)});
 });
 
-// app.post('/build', function(req, res) {
-//   const {scpu, sgpu, smotherboard, spsu, scooler, case1} = req.body;
-//   res.send(`Your order string is: ${scpu}, ${smotherboard}, ${sgpu}, ${spsu}, ${scooler}, ${case1}`)
-// })
+app.post('/build', function(req, res) {
+  const {scpu, sgpu, smotherboard, spsu, scooler, case1} = req.body;
+  app.post('/order_history', function(req, res) {
+    res.render('Your order string is: ', {scpu, sgpu, smotherboard, spsu, scooler, case1})
+  })
+})
 
 app.use('/public', express.static(path.join(__dirname)));
 app.use((req, res, next) => {
