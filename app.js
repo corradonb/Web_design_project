@@ -22,9 +22,9 @@ app.get('/404',function(req,res) {
 });
 
 app.post('/build', function(req, res) {
-  const {scpu, sgpu, smotherboard, spsu, scooler, case1} = req.body;
+  const {scpu, smotherboard, sgpu,  spsu, scooler, case1} = req.body;
   app.post('/order_history', function(req, res) {
-    res.render('Your order string is: ', {scpu, sgpu, smotherboard, spsu, scooler, case1})
+    res.render('Your order string is: ', {scpu, smotherboard, sgpu, spsu, scooler, case1})
   })
 })
 
