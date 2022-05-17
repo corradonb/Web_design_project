@@ -53,10 +53,23 @@ function createPopup() {
 
     button.addEventListener("click", onClickDelete);
 }
+document.addEventListener('keydown', (event)=>{
+    if(event.key=='Escape') {
+        onClickDelete(event);
+    }
+    else {
+        return;
+    }
+})
 function onClickDelete(event){
-    var a = document.getElementById("popup");
-    a.remove();
-    event.stopPropagation();
+    const a = document.getElementById("popup");
+    if(a!=null)
+        a.remove();
+    else
+        return;
+    if(event.currentTarget.tagName=='BUTTON')
+        event.stopPropagation();
+
 }
 
 function handleSubmit(event) {

@@ -2,7 +2,7 @@
  proiect_final
 
  TO_DO_LIST:
- javascript:    target, currentTarget
+ javascript:    target
                 getComputedStyle(), getBoundingClientRect()
 
  node:          post requests (uncomment app.js, add method="post" to form in html, remove preventDefault() from js form handler)

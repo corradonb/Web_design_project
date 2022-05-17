@@ -40,6 +40,22 @@ function handleSubmit(event) {
     }
 }
 
+document.addEventListener('keydown', (event)=>{
+    if(event.key=='Escape') {
+        onClickDelete();
+    }
+    else {
+        return;
+    }
+})
+
+function onClickDelete(event){
+    var x=document.getElementById("login_container");
+    var y=document.getElementById("signup_container");
+    x.style.display="none";
+    y.style.display="none";
+}
+
 function init() {
     const form = document.querySelector('form');
     form.addEventListener('submit', handleSubmit);

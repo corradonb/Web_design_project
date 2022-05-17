@@ -33,6 +33,4 @@ app.use((req, res, next) => {
   res.status(404).sendFile("/public/html/404.html", {root: path.join(__dirname)});
 });
 
-
-
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
