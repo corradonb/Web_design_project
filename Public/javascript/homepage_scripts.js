@@ -25,7 +25,6 @@ function onClickSignup(){
     x.style.display="block";
 }
 function handleSubmit(event) {
-    const email = document.querySelector('[name="email"]').value;
     const username = document.querySelector('[name="name"]').value;
     const password = document.querySelector('[name="password"]').value;
     const regex1 = /^[0-9A-Za-z-_ ]+$/;

@@ -1,7 +1,10 @@
-const express = require('express')
-const app = express();
+const express = require('express');
 const bodyParser = require('body-parser');
+const res = require('express/lib/response');
+const app = express();
 const path = require('path');
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname));
 
 app.use(bodyParser.urlencoded({ extended: false }))
 
@@ -17,15 +20,17 @@ app.get('/build',function(req,res) {
 app.get('/order_history',function(req,res) {
     res.sendFile('/public/html/order_history.html', {root: path.join(__dirname)});
 });
+app.get('/login',function(req,res) {
+  res.sendFile('/public/html/login.ejs', {root: path.join(__dirname)});
+});
 app.get('/404',function(req,res) {
   res.sendFile('/public/html/404.html', {root: path.join(__dirname)});
 });
 
-app.post('/build', function(req, res) {
-  const {scpu, smotherboard, sgpu,  spsu, scooler, case1} = req.body;
-  app.post('/order_history', function(req, res) {
-    res.render('Your order string is: ', {scpu, smotherboard, sgpu, spsu, scooler, case1})
-  })
+
+app.post('/homepage', function(req, res) {
+  const {name, password} = req.body;
+  res.render("login.ejs", {name, password});
 })
 
 app.use('/public', express.static(path.join(__dirname)));
@@ -33,4 +38,6 @@ app.use((req, res, next) => {
   res.status(404).sendFile("/public/html/404.html", {root: path.join(__dirname)});
 });
 
-app.listen(process.env.PORT || 3000);
+
+
+app.listen(3000);
