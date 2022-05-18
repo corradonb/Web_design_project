@@ -67,8 +67,13 @@ nav {
 }
 
 main {
-    font-size: 20px;
+    font-size: 18px;
+    display: grid;
 }
+
+
+
+
 
 footer {
     margin-bottom: 0;
