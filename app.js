@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const res = require('express/lib/response');
 const app = express();
 const path = require('path');
+const fetch = require('node-fetch');
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname));
 
@@ -30,7 +32,7 @@ app.get('/404',function(req,res) {
 
 app.post('/homepage', function(req, res) {
   const {name, password} = req.body;
-  res.render("login.ejs", {name, password});
+  res.render("public/html/login.ejs", {name, password});
 })
 
 app.use('/public', express.static(path.join(__dirname)));
