@@ -5,7 +5,7 @@
  javascript:    target
                 getComputedStyle(), getBoundingClientRect()
 
- node:          ajax requests from json
+ node:          ajax/fetch requests from json
                 login/logout session
 
 optional:       email regex
