@@ -110,7 +110,7 @@ nav {
 .signup_container {
     display: none;
     width: 25vw;
-    height: 40vh;
+    height: 55vh;
     position: absolute;
     background-color: rgb(243, 244, 248);
     margin-left: 37.5vw;
@@ -244,6 +244,14 @@ main {
         margin-left: 25vw;
         margin-top: 20vh;
     }   
+    .signup_container {
+        height: 80vh;
+    }
+    .confirm, .cancel {
+        font-size: 15px;
+        padding: 3px 5px;
+        margin-left: 10px;
+    }
 }
 
 footer {

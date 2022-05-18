@@ -4,6 +4,9 @@ const res = require('express/lib/response');
 const app = express();
 const path = require('path');
 const fetch = require('node-fetch');
+const fs = require('fs');
+const formidable=require('formidable');
+
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname));
@@ -39,7 +42,23 @@ app.use('/public', express.static(path.join(__dirname)));
 app.use((req, res, next) => {
   res.status(404).sendFile("/public/html/404.html", {root: path.join(__dirname)});
 });
+/*
+app.post('/rezervari',function(req,res){
+  var userDetails;
+  console.log(fs.existsSync("persoane.json"))
+if (fs.existsSync("persoane.json"))
+{
+var date= fs.readFileSync("persoane.json");
+userDetails=JSON.parse(date);
+}
+else
+  userDetails=[];
 
+const details = {firstname, lastname, email, nr, data_sosire, data_plecare, camera, guests, requests} = req.body;
+userDetails.push(details);
+fs.writeFileSync("persoane.json",JSON.stringify(userDetails));
 
-
+res.render('Rezervari_realizate.ejs' ,{firstname, lastname, email, nr, data_sosire, data_plecare, camera, guests, requests});
+});
+*/
 app.listen(3000);

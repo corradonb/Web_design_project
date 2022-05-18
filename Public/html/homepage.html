@@ -21,7 +21,7 @@
         </form> 
     </div>
     <div class="signup_container" id="signup_container">
-        <form class="login_form">
+        <form class="login_form signup_form" method="post">
             <label for="email">E-mail:</label><br>
             <input type="text" id="email" name="email" value="" required><br>
             <label for="name">Username:</label><br>
@@ -29,7 +29,7 @@
             <label for="passowrd">Password:</label><br>
             <input type="password" id="password" name="password" value="" required><br>
             <label for="passowrd">Confirm password:</label><br>
-            <input type="password" id="password" name="password" value="" required><br><br>
+            <input type="password" id="password" name="password" value="" required><br>
             <br>
             <input type="submit" class="confirm" value="Sign Up">
             <button type="button" class="cancel" onclick="onClickCancel()">Cancel</button>
