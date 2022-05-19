@@ -31,7 +31,7 @@ function createPopup() {
     
     const text = document.createElement('div');
     div.appendChild(text);
-    text.innerHTML="Congratulations! Your order has been registered";
+    text.innerHTML="Please input relevant request data";
     text.style.textAlign="center";
     text.style.marginTop="5vh";
     text.style.fontSize="18px";
@@ -79,10 +79,16 @@ function handleSubmit(event) {
     const psu = document.querySelector('[name="psu"]:checked').value;
     const cooler = document.querySelector('[name="cooler"]:checked').value;
     const case1 = document.querySelector('[name="case1"]:checked').value;
+    const req=document.querySelector('[name="req"]').value;
+    const regex= /^[0-9A-Za-z-_ ]+$/;
+    if(regex.test(req)) {
 
-    const order_string = cpu + ", " + motherboard + ", " + gpu + ", " + psu + ", " + cooler + ", " + case1;
+    }
+    else {
     createPopup();
     event.preventDefault();
+    }
+
 }
 
 function init() {

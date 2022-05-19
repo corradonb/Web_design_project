@@ -162,7 +162,10 @@ main {
 .cpu {
     display: flex;
 }
+#req{
+    width: 95%;
 
+}
 .img_radio {
     opacity: 0;
     width: 0;

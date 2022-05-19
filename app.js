@@ -29,7 +29,32 @@ app.get('/login',function(req,res) {
 app.get('/404',function(req,res) {
   res.sendFile('/public/html/404.html', {root: path.join(__dirname)});
 });
+app.get('/fetch_route', function(req,res) {
+  res.sendFile('units.json',{root: path.join(__dirname)});
+});
 
+app.post('/build',function(req,res){
+  var parts;
+  console.log(fs.existsSync("units.json"));
+  if (fs.existsSync("units.json"))
+  {
+    var data= fs.readFileSync("units.json");
+    parts=JSON.parse(data);
+  }
+  else
+    parts=[];
+
+  const details = {scpu, smotherboard, sgpu, spsu, scooler, scase} = req.body;
+  parts.push(details);
+  console.log(parts.length);
+  console.log(details);
+  fs.writeFile('units.json',JSON.stringify(parts),(err) => {
+    if (err) {
+        throw err;
+    }
+  });
+  res.sendFile("/public/html/build.html", {root: path.join(__dirname)});
+});
 
 app.post('/homepage', function(req, res) {
   const {name, password} = req.body;
@@ -42,21 +67,7 @@ app.use((req, res, next) => {
 });
 
 
-app.post('/build',function(req,res){
-  var parts;
-  console.log(fs.existsSync("units.json"))
-if (fs.existsSync("units.json"))
-{
-var data= fs.readFileSync("units.json");
-parts=JSON.parse(data);
-}
-else
-  parts=[];
 
-const details = {scpu, smotherboard, sgpu, spsu, scooler, scase} = req.body;
-parts.push(details);
-fs.writeFileSync("units.json",JSON.stringify(parts));
-});
 
 
 app.listen(3000);
