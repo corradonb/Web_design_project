@@ -63,10 +63,7 @@ document.addEventListener('keydown', (event)=>{
 })
 function onClickDelete(event){
     const a = document.getElementById("popup");
-    if(a!=null)
-        a.remove();
-    else
-        return;
+    a.remove();
     if(event.currentTarget.tagName=='BUTTON')
         event.stopPropagation();
 
