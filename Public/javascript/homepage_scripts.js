@@ -25,9 +25,11 @@ function onClickSignup(){
     x.style.display="block";
 }
 function handleSubmit(event) {
-    const username = document.querySelector('[name="name"]').value;
+    var username = document.querySelector('[name="name"]').value;
+    username=username.toLowerCase();
+    console.log(username);
     const password = document.querySelector('[name="password"]').value;
-    const regex1 = /^[0-9A-Za-z-_ ]+$/;
+    const regex1 = /^[0-9a-z-_ ]+$/;
     const regex2 = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const credentials = username + ", " + password;
     if(regex1.test(username)){

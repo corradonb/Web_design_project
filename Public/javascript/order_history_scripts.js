@@ -3,7 +3,9 @@ function getRandomInt(max) {
 }
 async function fetchData() {
     const res=await fetch('/fetch_route');
-    const data=await res.json();
+    var data=await res.json();
+    data=data.reverse();
+    console.log(data);
     const {scpu, smotherboard, sgpu, spsu, scooler, case1, req} = data[0];
     let text=scpu + ", " + smotherboard + ", " + sgpu + ", " + spsu + ", " + scooler + ", " + case1 + ", " + req;
     recordFirstOrder(text);
