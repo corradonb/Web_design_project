@@ -2,7 +2,7 @@
  proiect_final
 
  TO_DO_LIST:
- javascript:    target
+ javascript:    date, string, array function
 
  node:          login/logout session
 
